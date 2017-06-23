@@ -37,7 +37,7 @@ public abstract class Creature extends Entity{
 					!collisionWithTile(tx, (int) (y + bounds.y + bounds.height) / Tile.TILEHEIGHT)){
 				x += xMove;
 			}else{
-				if(digDirt(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT)==1)
+				if(digDirt(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT)==1||digDirt(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT)==4)
 				{
 					handler.getWorld().changeType(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT, 0);
 
@@ -52,7 +52,7 @@ public abstract class Creature extends Entity{
 					!collisionWithTile(tx, (int) (y + bounds.y + bounds.height) / Tile.TILEHEIGHT)){
 			x += xMove;
 			}else{
-				if(digDirt(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT)==1)
+				if(digDirt(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT)==1||digDirt(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT)==4)
 				{
 					handler.getWorld().changeType(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT, 0);
 
@@ -70,7 +70,7 @@ public abstract class Creature extends Entity{
 					!collisionWithTile((int) (x + bounds.x + bounds.width) / Tile.TILEWIDTH, ty)){
 				y += yMove;
 			}else{
-				if(digDirt((int) (x + bounds.x) / Tile.TILEWIDTH, ty)==1)
+				if(digDirt((int) (x + bounds.x) / Tile.TILEWIDTH, ty)==1||digDirt((int) (x + bounds.x) / Tile.TILEWIDTH, ty)==4)
 				{
 					handler.getWorld().changeType((int) (x + bounds.x) / Tile.TILEWIDTH, ty, 0);
 
@@ -86,7 +86,7 @@ public abstract class Creature extends Entity{
 				y += yMove;
 
 			}else{
-				if(digDirt((int) (x + bounds.x) / Tile.TILEWIDTH, ty)==1)
+				if(digDirt((int) (x + bounds.x) / Tile.TILEWIDTH, ty)==1||digDirt((int) (x + bounds.x) / Tile.TILEWIDTH, ty)==4)
 				{
 					handler.getWorld().changeType((int) (x + bounds.x) / Tile.TILEWIDTH, ty, 0);
 
