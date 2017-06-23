@@ -48,6 +48,7 @@ public abstract class Creature extends Entity{
 					if(nbDiamond==nbDiamondMax)
 					{
 						System.out.println("Vous avez récupéré tous les diamants");
+						System.exit(0);
 					}}
 					handler.getWorld().changeType(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT, 0);
 
@@ -72,6 +73,7 @@ public abstract class Creature extends Entity{
 					{
 						
 						System.out.println("Vous avez récupéré tous les diamants");
+						System.exit(0);
 					}
 					}
 					handler.getWorld().changeType(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT, 0);
@@ -99,6 +101,7 @@ public abstract class Creature extends Entity{
 					if(nbDiamond==nbDiamondMax)
 					{
 						System.out.println("Vous avez récupéré tous les diamants");
+						System.exit(0);
 					}}
 					handler.getWorld().changeType((int) (x + bounds.x) / Tile.TILEWIDTH, ty, 0);
 
@@ -122,7 +125,9 @@ public abstract class Creature extends Entity{
 					System.out.println(nbDiamond+" diamants récupérés sur "+nbDiamondMax);
 					if(nbDiamond==nbDiamondMax)
 					{
+
 						System.out.println("Vous avez récupéré tous les diamants");
+						System.exit(0);
 					}}
 					handler.getWorld().changeType((int) (x + bounds.x) / Tile.TILEWIDTH, ty, 0);
 
