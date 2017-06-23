@@ -15,6 +15,8 @@ public abstract class Creature extends Entity{
 	protected int health;
 	protected float speed;
 	protected float xMove, yMove;
+	public int nbDiamond;
+	public int nbDiamondMax=15;
 	
 	public Creature(Handler handler, float x, float y, int width, int height) {
 		super(handler, x, y, width, height);
@@ -39,6 +41,14 @@ public abstract class Creature extends Entity{
 			}else{
 				if(digDirt(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT)==1||digDirt(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT)==4)
 				{
+					if(digDirt(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT)==4)
+					{
+					nbDiamond++;
+					System.out.println(nbDiamond+" diamants récupérés sur "+nbDiamondMax);
+					if(nbDiamond==nbDiamondMax)
+					{
+						System.out.println("Vous avez récupéré tous les diamants");
+					}}
 					handler.getWorld().changeType(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT, 0);
 
 				}
@@ -54,6 +64,16 @@ public abstract class Creature extends Entity{
 			}else{
 				if(digDirt(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT)==1||digDirt(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT)==4)
 				{
+					if(digDirt(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT)==4)
+					{
+					nbDiamond++;
+					System.out.println(nbDiamond+" diamants récupérés sur "+nbDiamondMax);
+					if(nbDiamond==nbDiamondMax)
+					{
+						
+						System.out.println("Vous avez récupéré tous les diamants");
+					}
+					}
 					handler.getWorld().changeType(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT, 0);
 
 				}
@@ -72,6 +92,14 @@ public abstract class Creature extends Entity{
 			}else{
 				if(digDirt((int) (x + bounds.x) / Tile.TILEWIDTH, ty)==1||digDirt((int) (x + bounds.x) / Tile.TILEWIDTH, ty)==4)
 				{
+					if(digDirt((int) (x + bounds.x) / Tile.TILEWIDTH, ty)==4)
+					{
+					nbDiamond++;
+					System.out.println(nbDiamond+" diamants récupérés sur "+nbDiamondMax);
+					if(nbDiamond==nbDiamondMax)
+					{
+						System.out.println("Vous avez récupéré tous les diamants");
+					}}
 					handler.getWorld().changeType((int) (x + bounds.x) / Tile.TILEWIDTH, ty, 0);
 
 				}
@@ -88,6 +116,14 @@ public abstract class Creature extends Entity{
 			}else{
 				if(digDirt((int) (x + bounds.x) / Tile.TILEWIDTH, ty)==1||digDirt((int) (x + bounds.x) / Tile.TILEWIDTH, ty)==4)
 				{
+					if(digDirt((int) (x + bounds.x) / Tile.TILEWIDTH, ty)==4)
+					{
+					nbDiamond++;
+					System.out.println(nbDiamond+" diamants récupérés sur "+nbDiamondMax);
+					if(nbDiamond==nbDiamondMax)
+					{
+						System.out.println("Vous avez récupéré tous les diamants");
+					}}
 					handler.getWorld().changeType((int) (x + bounds.x) / Tile.TILEWIDTH, ty, 0);
 
 				}
