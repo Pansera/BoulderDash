@@ -37,6 +37,11 @@ public abstract class Creature extends Entity{
 					!collisionWithTile(tx, (int) (y + bounds.y + bounds.height) / Tile.TILEHEIGHT)){
 				x += xMove;
 			}else{
+				if(digDirt(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT)==1)
+				{
+					handler.getWorld().changeType(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT, 0);
+
+				}
 				x = tx * Tile.TILEWIDTH - bounds.x - bounds.width - 1;
 			}
 			
@@ -47,6 +52,11 @@ public abstract class Creature extends Entity{
 					!collisionWithTile(tx, (int) (y + bounds.y + bounds.height) / Tile.TILEHEIGHT)){
 			x += xMove;
 			}else{
+				if(digDirt(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT)==1)
+				{
+					handler.getWorld().changeType(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT, 0);
+
+				}
 				x = tx * Tile.TILEWIDTH + Tile.TILEWIDTH - bounds.x;
 			}
 		}
@@ -60,6 +70,11 @@ public abstract class Creature extends Entity{
 					!collisionWithTile((int) (x + bounds.x + bounds.width) / Tile.TILEWIDTH, ty)){
 				y += yMove;
 			}else{
+				if(digDirt((int) (x + bounds.x) / Tile.TILEWIDTH, ty)==1)
+				{
+					handler.getWorld().changeType((int) (x + bounds.x) / Tile.TILEWIDTH, ty, 0);
+
+				}
 				y = ty * Tile.TILEHEIGHT + Tile.TILEHEIGHT - bounds.y;
 			}
 			
@@ -69,8 +84,15 @@ public abstract class Creature extends Entity{
 			if(!collisionWithTile((int) (x + bounds.x) / Tile.TILEWIDTH, ty) &&
 					!collisionWithTile((int) (x + bounds.x + bounds.width) / Tile.TILEWIDTH, ty)){
 				y += yMove;
+
 			}else{
+				if(digDirt((int) (x + bounds.x) / Tile.TILEWIDTH, ty)==1)
+				{
+					handler.getWorld().changeType((int) (x + bounds.x) / Tile.TILEWIDTH, ty, 0);
+
+				}
 				y = ty * Tile.TILEHEIGHT - bounds.y - bounds.height - 1;
+
 			}
 		}
 	}
@@ -78,7 +100,9 @@ public abstract class Creature extends Entity{
 	protected boolean collisionWithTile(int x, int y){
 		return handler.getWorld().getTile(x, y).isSolid();
 	}
-	
+	protected int digDirt(int x, int y){
+		return handler.getWorld().getTile(x,y).getId();
+	}
 	//GETTERS SETTERS
 	
 	public int getHealth() {

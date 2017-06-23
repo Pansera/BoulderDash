@@ -20,7 +20,7 @@ public class Tile {
 	public static final int TILEWIDTH = 40, TILEHEIGHT = 40;
 	
 	public BufferedImage texture;
-	protected final int id;
+	protected int id;
 	
 	public Tile(BufferedImage texture, int id){
 		this.texture = texture;
@@ -44,5 +44,11 @@ public class Tile {
 	public int getId(){
 		return id;
 	}
+	public void setId(int id)
+	{
 
+		this.id = id;
+		System.out.println(id);
+	}
+	
 }

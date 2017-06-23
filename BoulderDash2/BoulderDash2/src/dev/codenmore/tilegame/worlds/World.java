@@ -57,6 +57,8 @@ public class World {
 		return t;
 	}
 	
+
+
 	private void loadWorld(String path){
 		String file = Utils.loadFileAsString(path);
 		String[] tokens = file.split("\\s+");
@@ -71,6 +73,10 @@ public class World {
 				tiles[x][y] = Utils.parseInt(tokens[(x + y * width) + 4]);
 			}
 		}
+	}
+	public void changeType(int a, int b, int c)
+	{
+		tiles[a][b]=c;
 	}
 	
 	public int getWidth(){
