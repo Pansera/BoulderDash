@@ -1,6 +1,7 @@
 package dev.codenmore.tilegame.gfx;
 
 import java.awt.image.BufferedImage;
+import dev.codenmore.tilegame.BDD.ReadDB;
 
 public class Assets {
 
@@ -26,6 +27,8 @@ public class Assets {
 		yellow = sheet.crop(width, height * 8, width, height);
 		hole = sheet.crop(width * 2, 0, width, height);
 		grass = sheet.crop(width, height * 12, width, height);
+		
+		//System.out.println(ReadDB.salut);
 		
 		
 		SpriteSheet sheet1 = new SpriteSheet(ImageLoader.loadImage("/player/74336T.png"));

@@ -31,6 +31,37 @@ public abstract class Creature extends Entity{
 		moveY();
 	}
 	
+	protected void moveRock(){
+
+    }
+
+    protected void checkRock(int txRock, int tyRock){
+        // Verification si une pierre doit tomber
+        // Check num 1 : Verifier si la tile supperieur est une pierre
+        // Si tile supperieur n'est pas une pierre : alors on break
+        // Si tile supperieur est une pierre : alors on deplace la pierre jusqu'a la prochaine position possible
+
+        int tyRockInitial = tyRock;
+
+        int txUnderRock = txRock;
+        int tyUnderRock = (int) ((y + yMove + bounds.y) / Tile.TILEHEIGHT);
+
+
+        if(digDirt(txRock, tyRock)==3){
+            // Bouger la pierre jusqu'a nouvelle position possible
+
+            while(digDirt(txUnderRock, tyUnderRock)==0){
+                handler.getWorld().changeType(txRock, tyRock, 0);
+                handler.getWorld().changeType(txUnderRock, tyUnderRock, 3);
+                tyRock = tyUnderRock;
+                tyUnderRock = tyRock + 1;
+            }
+
+            checkRock(txRock, tyRockInitial - 1);
+
+        }
+    }
+	
 	public void moveX(){
 		if(xMove > 0){   //Moving right
 			int tx = (int) (x + xMove + bounds.x + bounds.width) / Tile.TILEWIDTH;
@@ -51,6 +82,8 @@ public abstract class Creature extends Entity{
 						System.exit(0);
 					}}
 					handler.getWorld().changeType(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT, 0);
+					checkRock(tx,(int) ((y + yMove + bounds.y) / Tile.TILEHEIGHT) - 1);
+
 
 				}
 				x = tx * Tile.TILEWIDTH - bounds.x - bounds.width - 1;
@@ -77,6 +110,7 @@ public abstract class Creature extends Entity{
 					}
 					}
 					handler.getWorld().changeType(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT, 0);
+					checkRock(tx,(int) ((y + yMove + bounds.y) / Tile.TILEHEIGHT) - 1);
 
 				}
 				x = tx * Tile.TILEWIDTH + Tile.TILEWIDTH - bounds.x;
@@ -104,6 +138,8 @@ public abstract class Creature extends Entity{
 						System.exit(0);
 					}}
 					handler.getWorld().changeType((int) (x + bounds.x) / Tile.TILEWIDTH, ty, 0);
+					int tx = (int) (x + xMove + bounds.x) / Tile.TILEWIDTH;
+                    checkRock(tx,ty- 1);
 
 				}
 				y = ty * Tile.TILEHEIGHT + Tile.TILEHEIGHT - bounds.y;
