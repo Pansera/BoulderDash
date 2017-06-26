@@ -3,7 +3,12 @@ package dev.codenmore.tilegame.gfx;
 import java.awt.image.BufferedImage;
 import dev.codenmore.tilegame.BDD.ReadDB;
 
+
+
 public class Assets {
+	
+	
+
 
 	private static final int width = 16, height = 16;
 	
@@ -14,22 +19,21 @@ public class Assets {
 	public static void init(){
 		SpriteSheet sheet2 = new SpriteSheet(ImageLoader.loadImage("/player/boutton.png"));
 		
+	
+		
 		btn_start = new BufferedImage[2];
 		btn_start[0] = sheet2.crop(width * 4, height * 2, width * 2, height);
 		btn_start[1] = sheet2.crop(width * 4, height * 3, width * 2, height);
 		
 		SpriteSheet sheet = new SpriteSheet(ImageLoader.loadImage("/textures/SpriteDecor.png"));
 		
-		dirt = sheet.crop(width, 0, width, height);
-		violet = sheet.crop(0, 0, width, height);
-		stone = sheet.crop(width * 3, 0, width, height);
-		diamond = sheet.crop(width * 4, 0, width, height);
+		dirt = sheet.crop(width * ReadDB.GrassX, height * ReadDB.GrassY, width, height);
+		violet = sheet.crop(width * ReadDB.VioletX, height * ReadDB.VioletY, width, height);
+		stone = sheet.crop(width * ReadDB.StoneX, height * ReadDB.StoneY, width, height);
+		diamond = sheet.crop(width * ReadDB.DiamondX, height * ReadDB.DiamondY, width, height);
 		yellow = sheet.crop(width, height * 8, width, height);
-		hole = sheet.crop(width * 2, 0, width, height);
+		hole = sheet.crop(width * ReadDB.HoleX, height * ReadDB.HoleY, width, height);
 		grass = sheet.crop(width, height * 12, width, height);
-		
-		//System.out.println(ReadDB.salut);
-		
 		
 		SpriteSheet sheet1 = new SpriteSheet(ImageLoader.loadImage("/player/74336T.png"));
 		

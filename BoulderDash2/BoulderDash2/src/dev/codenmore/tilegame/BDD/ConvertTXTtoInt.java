@@ -19,8 +19,10 @@ public class ConvertTXTtoInt {
 			int ii = i/Width_Map;
 			map1[ii][jj] = Integer.parseInt(tableau[i]);
 
+			
+
 		}
-		System.out.println(map1);
+
 		
 		/*for(int j=0; j<Height_Map; j++){
 			for(int k=0; k<Width_Map; k++){

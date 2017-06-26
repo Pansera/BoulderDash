@@ -4,8 +4,21 @@ import java.sql.*;
 
 public class ReadDB {
 	
-	//public static int salut = 10;
 
+	
+	public int batman = 12;
+	public static  int GrassX;
+	public static int GrassY;
+	public static int VioletX;
+	public static int VioletY;
+	public static int StoneX;
+	public static int StoneY;
+	public static int DiamondX;
+	public static int DiamondY;
+	public static int HoleX;
+	public static int HoleY;
+	
+	
 	String map;
 	int ID_Map, Width_Map, Height_Map;
 	
@@ -21,12 +34,26 @@ public class ReadDB {
 		String connectionPassword = "";
 		conn = DriverManager.getConnection(connectionUrl, connectionUser, connectionPassword);
 		stmt = conn.createStatement();
-		rs = stmt.executeQuery("SELECT * FROM map WHERE `ID_Map` =" + id_map);
+		//rs = stmt.executeQuery("SELECT * FROM  gfx WHERE =" + id_map);
+		rs = stmt.executeQuery("SELECT * FROM gfx,map WHERE 1");
 		while (rs.next()) {
-			ID_Map = rs.getInt("ID_Map");
+			//ID_Map = rs.getInt("ID_Map");
 			Width_Map = rs.getInt("Width_Map");
 			Height_Map = rs.getInt("Height_Map");
+			
+			GrassX = rs.getInt("GrassX");
+			GrassY = rs.getInt("GrassY");
+			VioletX = rs.getInt("VioletX");
+			VioletY = rs.getInt("VioletY");
+			StoneX = rs.getInt("StoneX");
+			StoneY = rs.getInt("StoneY");
+			DiamondX = rs.getInt("DiamondX");
+			DiamondY = rs.getInt("DiamondY");
+			HoleX = rs.getInt("HoleX");
+			HoleY = rs.getInt("HoleY");
+			
 
+			
 			map = rs.getString("Map");
 			//map = test.toCharArray();
 			/*System.out.println("ID_Map: " + ID_Map + ", Width_Map: " + Width_Map
@@ -39,6 +66,7 @@ public class ReadDB {
 		try { if (stmt != null) stmt.close(); } catch (SQLException e) { e.printStackTrace(); }
 		try { if (conn != null) conn.close(); } catch (SQLException e) { e.printStackTrace(); }
 	}
+
 }
 	//-----------Getter----------//
 	
@@ -58,5 +86,8 @@ public class ReadDB {
 		return Height_Map;
 	}
 
+	public int getGrassX(){
+		return GrassX;
+	}
 
 }

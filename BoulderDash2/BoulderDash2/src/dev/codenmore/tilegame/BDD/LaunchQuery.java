@@ -3,9 +3,9 @@ package dev.codenmore.tilegame.BDD;
 public class LaunchQuery {
 
 
-	int[][] mapUse;
+	public static int[][] mapUse;
 	int width_Map, height_Map;
-				String Map;
+	public static String Map;
 				
 	public int[][] callDB(int idMap){
 		
@@ -15,18 +15,25 @@ public class LaunchQuery {
 			db.read(idMap);
 			height_Map = db.getHeight_Map();
 			width_Map = db.getWidth_Map();
+			
+			//public  int GrassXO = db.getGrassX;
+		
 
 			//String map = db.getMap();
 
 			Map = db.getMap();
-			//System.out.println(height);
-			//System.out.println(width);
+			System.out.println(height_Map);
+			System.out.println(width_Map);
 
 			//System.out.println(mapUse);
+
+
 			ConvertTXTtoInt txtInt = new ConvertTXTtoInt();
 			txtInt.txtToInt(Map, width_Map, height_Map);
 			mapUse = txtInt.getMap();
+			//System.out.println("mapUse");
 			return mapUse;
+			
 
 			}
 

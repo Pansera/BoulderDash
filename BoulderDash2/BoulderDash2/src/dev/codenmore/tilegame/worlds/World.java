@@ -13,7 +13,8 @@ import dev.codenmore.tilegame.BDD.LaunchQuery;
 public class World {
 	
 
-	public LaunchQuery lq;
+	String Map;
+	int[][] map1;
 	private Handler handler;
 	private int width, height;
 	private int spawnX, spawnY;
@@ -66,9 +67,8 @@ public class World {
 
 
 	private void loadWorld(String path){
-		LaunchQuery lq = new LaunchQuery();
-		lq.callDB(1);
-		//String file = lq.getMap();
+
+		//String file = LaunchQuery.Map;
 		String file = Utils.loadFileAsString(path);
 		String[] tokens = file.split("\\s+");
 		width = Utils.parseInt(tokens[0]);
@@ -78,7 +78,6 @@ public class World {
 
 	
 		tiles = new int[width][height];
-		//tiles = lq.getMapUse();
 
 		System.out.println(tiles);
 
@@ -88,6 +87,7 @@ public class World {
 				tiles[x][y] = Utils.parseInt(tokens[(x + y * width) + 4]);
 			}
 		}
+
 	}
 
 
