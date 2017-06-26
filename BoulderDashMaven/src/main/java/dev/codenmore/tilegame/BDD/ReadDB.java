@@ -34,8 +34,7 @@ public class ReadDB {
 		String connectionPassword = "";
 		conn = DriverManager.getConnection(connectionUrl, connectionUser, connectionPassword);
 		stmt = conn.createStatement();
-		//rs = stmt.executeQuery("SELECT * FROM  gfx WHERE =" + id_map);
-		rs = stmt.executeQuery("SELECT * FROM gfx,map WHERE 1");
+		rs = stmt.executeQuery("SELECT * FROM gfx,map WHERE Id_Map=1 AND ID_Map1 =1");
 		while (rs.next()) {
 			//ID_Map = rs.getInt("ID_Map");
 			Width_Map = rs.getInt("Width_Map");
