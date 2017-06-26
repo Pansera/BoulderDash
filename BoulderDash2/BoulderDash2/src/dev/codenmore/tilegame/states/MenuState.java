@@ -7,7 +7,11 @@ import dev.codenmore.tilegame.gfx.Assets;
 import dev.codenmore.tilegame.ui.ClickListener;
 import dev.codenmore.tilegame.ui.UIImageButton;
 import dev.codenmore.tilegame.ui.UIManager;
-
+/**
+ * Class which manage the menu
+ * @author Vince
+ *
+ */
 public class MenuState extends State {
 	
 	private UIManager uiManager;

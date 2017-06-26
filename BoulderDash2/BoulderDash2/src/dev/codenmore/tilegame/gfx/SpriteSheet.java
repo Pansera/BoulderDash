@@ -1,7 +1,11 @@
 package dev.codenmore.tilegame.gfx;
 
 import java.awt.image.BufferedImage;
-
+/**
+ * Class which manage the sprite
+ * @author Vince
+ *
+ */
 public class SpriteSheet {
 
 	private BufferedImage sheet;

@@ -5,7 +5,11 @@ import java.awt.Dimension;
 
 import javax.swing.JFrame;
 
-
+/**
+ * Class which open the Jframe windows
+ * @author Vince
+ *
+ */
 public class Display{
 	
 	private JFrame frame;

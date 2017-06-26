@@ -1,0 +1,13 @@
+dev.codenmore.tilegame
+dev.codenmore.tilegame.BDD
+dev.codenmore.tilegame.display
+dev.codenmore.tilegame.entities
+dev.codenmore.tilegame.entities.creatures
+dev.codenmore.tilegame.entities.statics
+dev.codenmore.tilegame.gfx
+dev.codenmore.tilegame.input
+dev.codenmore.tilegame.states
+dev.codenmore.tilegame.tiles
+dev.codenmore.tilegame.ui
+dev.codenmore.tilegame.utils
+dev.codenmore.tilegame.worlds

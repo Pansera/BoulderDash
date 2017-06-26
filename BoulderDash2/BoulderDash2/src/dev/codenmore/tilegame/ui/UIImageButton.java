@@ -2,7 +2,11 @@ package dev.codenmore.tilegame.ui;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
-
+/**
+ * Class which show the button in the menu, and which manage click event 
+ * @author Vince
+ *
+ */
 public class UIImageButton extends UIObject{
 
 	private BufferedImage[] images;

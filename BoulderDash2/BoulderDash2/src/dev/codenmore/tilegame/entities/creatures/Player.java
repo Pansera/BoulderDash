@@ -6,7 +6,11 @@ import java.awt.image.BufferedImage;
 import dev.codenmore.tilegame.Handler;
 import dev.codenmore.tilegame.gfx.Animation;
 import dev.codenmore.tilegame.gfx.Assets;
-
+/**
+ * Class which manage the behavior of the player
+ * @author Vince
+ *
+ */
 public class Player extends Creature {
 
 	//Animations

@@ -3,6 +3,11 @@ package dev.codenmore.tilegame;
 import dev.codenmore.tilegame.BDD.LaunchQuery;
 //import dev.codenmore.tilegame.BDD.ConnexionJM;
 
+/**
+ * Main class which is only used to start the game
+ * @author Vince
+ *
+ */
 public class Launcher {
 
 	public LaunchQuery lq;

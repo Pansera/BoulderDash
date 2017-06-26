@@ -1,5 +1,7 @@
 package dev.codenmore.tilegame.gfx;
-
+/**
+ * Class which manage the camera of the game
+ */
 import dev.codenmore.tilegame.Handler;
 import dev.codenmore.tilegame.entities.Entity;
 import dev.codenmore.tilegame.tiles.Tile;

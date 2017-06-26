@@ -2,7 +2,11 @@ package dev.codenmore.tilegame.input;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-
+/**
+ * Class which manage key events
+ * @author Vince
+ *
+ */
 public class KeyManager implements KeyListener{
 	
 	private boolean[] keys;

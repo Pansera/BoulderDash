@@ -1,5 +1,9 @@
 package dev.codenmore.tilegame.BDD;
-
+/**
+ * Class which convert .txt in int
+ * @author Vince
+ *
+ */
 public class ConvertTXTtoInt {
 	
 	int[][] map1;

@@ -1,6 +1,10 @@
 package dev.codenmore.tilegame.BDD;
 import java.sql.*;
-
+/**
+ * Class which assures the connexion which the database
+ * @author Vince
+ *
+ */
 public class ConnexionJM {
 	
 	Connection cnx=connecteurDB();

@@ -4,7 +4,9 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 public class Tile {
-	
+	/**
+	 * Class which define the behavior of the tiles
+	 */
 	//STATIC STUFF HERE 
 	
 	public static Tile[] tiles = new Tile[256];

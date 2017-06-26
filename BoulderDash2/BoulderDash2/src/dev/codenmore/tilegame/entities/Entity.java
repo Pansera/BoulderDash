@@ -4,7 +4,11 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 
 import dev.codenmore.tilegame.Handler;
-
+/**
+ * Class which manage the entities
+ * @author Vince
+ *
+ */
 public abstract class Entity {
 
 	protected Handler handler;

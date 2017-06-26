@@ -1,7 +1,11 @@
 package dev.codenmore.tilegame.gfx;
 
 import java.awt.image.BufferedImage;
-
+/**
+ * Class which manage the animations of the character
+ * @author Vince
+ *
+ */
 public class Animation {
 
 	private int speed, index;

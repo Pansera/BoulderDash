@@ -5,7 +5,11 @@ import java.util.ArrayList;
 
 import dev.codenmore.tilegame.Handler;
 import dev.codenmore.tilegame.entities.creatures.Player;
-
+/**
+ * Class which manage the entities
+ * @author Vince
+ *
+ */
 public class EntityManager {
 
 	private Handler handler;

@@ -10,10 +10,17 @@ import dev.codenmore.tilegame.input.MouseManager;
 import dev.codenmore.tilegame.states.GameState;
 import dev.codenmore.tilegame.states.MenuState;
 import dev.codenmore.tilegame.states.State;
-
+/**
+ * Class which is used to 
+ * @author Vince
+ *
+ */
 public class Game implements Runnable{
-	
+/**
+ * 	
+ */
 	private Display display;
+
 	private int width, height;
 	public String title;
 	

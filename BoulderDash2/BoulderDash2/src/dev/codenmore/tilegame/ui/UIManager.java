@@ -5,7 +5,11 @@ import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 import dev.codenmore.tilegame.Handler;
-
+/**
+ * class which show our graphic interface
+ * @author Vince
+ *
+ */
 public class UIManager {
 
 	private Handler handler;

@@ -2,7 +2,11 @@ package dev.codenmore.tilegame.gfx;
 
 import java.awt.image.BufferedImage;
 import dev.codenmore.tilegame.BDD.ReadDB;
-
+/**
+ * Class with define each tile (it search it in the .png, and transforme it into an tile objet)
+ * @author Vince
+ *
+ */
 
 
 public class Assets {

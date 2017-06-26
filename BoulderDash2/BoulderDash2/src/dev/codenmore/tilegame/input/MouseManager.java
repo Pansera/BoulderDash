@@ -5,7 +5,11 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
 import dev.codenmore.tilegame.ui.UIManager;
-
+/**
+ * Class which manage mouse event
+ * @author Vince
+ *
+ */
 public class MouseManager implements MouseListener, MouseMotionListener{
 
 	private boolean leftPressed, rightPressed;

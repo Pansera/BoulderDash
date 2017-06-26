@@ -3,7 +3,11 @@ package dev.codenmore.tilegame.entities.creatures;
 import dev.codenmore.tilegame.Handler;
 import dev.codenmore.tilegame.entities.Entity;
 import dev.codenmore.tilegame.tiles.Tile;
-
+/**
+ * Class which manage the behavior of all the creatures
+ * @author Vince
+ *
+ */
 public abstract class Creature extends Entity{
 	
 	public static final int DEFAULT_HEALTH = 10;

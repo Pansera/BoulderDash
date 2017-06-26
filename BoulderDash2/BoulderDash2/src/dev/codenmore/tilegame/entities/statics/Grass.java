@@ -5,7 +5,11 @@ import java.awt.Graphics;
 import dev.codenmore.tilegame.Handler;
 import dev.codenmore.tilegame.gfx.Assets;
 import dev.codenmore.tilegame.tiles.Tile;
-
+/**
+ * Class which load grass in the map
+ * @author Vince
+ *
+ */
 public class Grass extends StaticEntity{
 
 	public Grass(Handler handler, float x, float y) {

@@ -3,7 +3,11 @@ package dev.codenmore.tilegame.states;
 import java.awt.Graphics;
 
 import dev.codenmore.tilegame.Handler;
-
+/**
+ * Class which switch between all the differents menu
+ * @author Vince
+ *
+ */
 public abstract class State {
 
 	private static State currentState = null;

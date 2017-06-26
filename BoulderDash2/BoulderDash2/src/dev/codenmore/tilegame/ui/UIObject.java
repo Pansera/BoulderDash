@@ -3,7 +3,11 @@ package dev.codenmore.tilegame.ui;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.awt.event.MouseEvent;
-
+/**
+ * Class in which the differents objet of the UI are declared and treated
+ * @author Vince
+ *
+ */
 public abstract class UIObject {
 
 	protected float x, y;
